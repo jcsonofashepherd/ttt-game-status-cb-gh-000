@@ -26,5 +26,5 @@ def won?(board)
       if bool then win_combo = combo
     end
   end
-  win_combo.size == 0 ? false : win_combo
+  win_combo = [] ? false : win_combo
 end
