@@ -23,6 +23,7 @@ def won?(board)
       bool = [board[combo[0]], board[combo[1]], board[combo[2]]].all? do |position|
         position == icon
       end
+      puts combo
       if bool then win_combo = combo
     end
   end
