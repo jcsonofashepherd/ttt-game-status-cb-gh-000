@@ -29,3 +29,7 @@ end
 def full?(board)
   return board.all? {|index| index == "X" || index == "O"}
 end
+
+def draw?(board)
+  return won?(board) && full?(board)
+end
