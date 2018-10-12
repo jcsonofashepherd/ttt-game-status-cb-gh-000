@@ -18,11 +18,13 @@ WIN_COMBINATIONS = [
 def won?(board)
   bool = false
   win_combo = []
-  WIN_COMBINATIONS.each do |combo|
-    bool = [board[combo[0]], board[combo[1]], board[combo[2]]].all? do |position|
-      position == "X"
+  ["X", "O"].each do |icon|
+    WIN_COMBINATIONS.each do |combo|
+      bool = [board[combo[0]], board[combo[1]], board[combo[2]]].all? do |position|
+        position == icon
+      end
+      if bool then win_combo = [combo[0], combo[1], combo[2]]
     end
-    if bool then win_combo = [combo[0], combo[1], combo[2]]
   end
   win_combo.size == 0 ? false : win_combo
 end
