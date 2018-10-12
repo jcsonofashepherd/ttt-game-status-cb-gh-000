@@ -19,7 +19,7 @@ def won?(board)
   bool = false
   WIN_COMBINATIONS.each do |combo|
     curr_combo = []
-    curr_combo = combo.each{|index| curr_combo << board[index]}
+    combo.each{|index| curr_combo << board[index]}
     if curr_combo == ["X", "X", "X"] || curr_combo == ["O", "O", "O"]
       return combo
     end
