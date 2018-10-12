@@ -23,5 +23,5 @@ def won?(board)
     curr_combo = combo.each{|index| curr_combo << board[index]}
     win_combo = curr_combo == ["X", "X", "X"] || curr_combo == ["O", "O", "O"] ? combo : false
   end
-  combo
+  win_combo
 end
