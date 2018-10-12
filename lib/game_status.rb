@@ -22,7 +22,7 @@ def won?(board)
     bool = [board[combo[0]], board[combo[1]], board[combo[2]]].all? do |position|
       position == "X"
     end
-    if bool then win_combo = [board[combo[0]], board[combo[1]], board[combo[2]]]
+    if bool then win_combo = [combo[0], combo[1], combo[2]]
   end
   win_combo.size == 0 ? false : win_combo
 end
