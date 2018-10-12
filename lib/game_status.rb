@@ -26,5 +26,5 @@ def won?(board)
     end
     if bool {win_combo = [board[combo[0]], board[combo[1]], board[combo[2]]]}
   end
-  bool
+  win_combo
 end
