@@ -37,3 +37,11 @@ end
 def over?(board)
   draw?(board) || won?(board)
 end
+
+def over?(board)
+  draw?(board) || won?(board)
+end
+
+def winner(board)
+  if won?(board) then board[won?(board)[0]]
+end
