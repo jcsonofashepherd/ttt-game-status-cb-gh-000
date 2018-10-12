@@ -16,7 +16,6 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  bool = false
   WIN_COMBINATIONS.each do |combo|
     curr_combo = []
     combo.each{|index| curr_combo << board[index]}
@@ -26,3 +25,6 @@ def won?(board)
   end
   return false
 end
+
+def full?(board)
+  b
