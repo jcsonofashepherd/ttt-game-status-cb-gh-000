@@ -20,7 +20,10 @@ def won?(board)
   win_combo = []
   WIN_COMBINATIONS.each do |combo|
     bool = [board[combo[0]], board[combo[1]], board[combo[2]]].all? do |position|
-      position == "X" || position == "O"
+      position == "X"
+    end
+    bool = [board[combo[0]], board[combo[1]], board[combo[2]]].all? do |position|
+      position == "O"
     end
     if bool then win_combo = [board[combo[0]], board[combo[1]], board[combo[2]]]
   end
