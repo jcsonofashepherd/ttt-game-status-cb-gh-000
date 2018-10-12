@@ -24,4 +24,5 @@ def won?(board)
       position == "X" || position == ")"
     end
   end
+  bool
 end
